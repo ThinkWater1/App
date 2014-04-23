@@ -11,23 +11,16 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <!-- EndOAWidget_Shared_2187524 -->
 <script src="includes/jquery-1.4.2.js" type="text/javascript"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 <!-- BeginOAWidget_Shared_2187524 -->
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <!-- EndOAWidget_Shared_2187524 -->
-<script type="text/xml">
-<!--
-<oa:widgets>
-  <oa:widget wid="2187524" binding="#mapCanvas" />
-</oa:widgets>
--->
-</script>
+
 </head> 
 <body> 
 
 <div data-role="page" id="page">
   <div data-role="header">
-    <h1><img src="logoprint3.png" alt="logo" width="80" height="80" align="middle"></h1>
+    <h1><img src="logoprint3.png" alt="logo" width="150" height="150" align="middle"></h1>
     <h1></h1>
   </div>
 	<div data-role="content">	
@@ -37,10 +30,11 @@
             <li><a href="#page3">About Us</a></li>
 			<li><a href="#page4">Contact Us </a></li>
 	  </ul>
-<p>For more information and features visit <a href="www.thinkwater.ie">ThinkWater.ie</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<p> Try our webiste for more exiting new features and tips.</p>
+<p>By logging on you can keep track of your water usage while learning of cheap and easy ways of decreasing your water bill. </p>
+<p>We also have an online booking service that allows you to book one of our approved plumbers in your area to attend to any of your plumbing needs.</p>
+<p>So why wait? Visit <a href="http://testingthinkwater.net84.net/">ThinkWater</a> today. </p>
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -93,7 +87,7 @@
 
 <div data-role="page" id="page2">
 	<div data-role="header">
-	  <h1><img src="logoprint3.png" alt="logo" width="80" height="80" align="middle"></h1>
+	  <h1><img src="logoprint3.png" alt="logo" width="150" height="150" align="middle"></h1>
 		<h1>Usage Calculator</h1><a href="#" data-rel="back">Back</a> </div>
         <div data-role="content">	
 
@@ -137,6 +131,7 @@
           <tr>
            <td ALIGN="left">No. of baths per week: </td>
            <td ALIGN="left"><select name="baths" id="selectmenu">
+           		<option value="0">0</option>
                <option value="1">1</option>
                <option value="2">2</option>
                <option value="3">3</option>
@@ -160,6 +155,7 @@
           <tr>
            <td ALIGN="left">No. of washing machine loads per week: </td>
            <td ALIGN="left"><select name="wash" id="selectmenu">
+               <option value="0">0</option>
                <option value="1">1</option>
                <option value="2">2</option>
                <option value="3">3</option>
@@ -208,7 +204,7 @@
 
 <div data-role="page" id="page3">
 	<div data-role="header">
-	  <h1><img src="logoprint3.png" alt="logo" width="80" height="80" align="middle"></h1>
+	  <h1><img src="logoprint3.png" alt="logo" width="150" height="150" align="middle"></h1>
 		<h1>About Us</h1><a href="#" data-rel="back">Back</a>
 	</div>
 	<div data-role="content">
@@ -235,77 +231,16 @@
 
 <div data-role="page" id="page4">
 	<div data-role="header">
-	  <h1><img src="logoprint3.png" alt="logo" width="80" height="80" align="middle"></h1>
+	  <h1><img src="logoprint3.png" alt="logo" width="150" height="150" align="middle"></h1>
 		<h1>Contact Us</h1><a href="#" data-rel="back">Back</a>
 	</div>
 	<div data-role="content">	
-      <div id="mapCanvas" style="width:100%; height:100%; min-width:300px; min-height:300px"></div>
-      <script type="text/javascript">
-// BeginOAWidget_Instance_2187524: #mapCanvas
-
-	  // initialize the google Maps 	
-	
-     function initializeGoogleMap() {
-		// set latitude and longitude to center the map around
-		var latlng = new google.maps.LatLng(53.42816, 
-											-9.00539);
-		
-		// set up the default options
-		var myOptions = {
-		  zoom: 8,
-		  center: latlng,
-		  navigationControl: true,
-		  navigationControlOptions: 
-		  	{style: google.maps.NavigationControlStyle.DEFAULT,
-			 position: google.maps.ControlPosition.RIGHT },
-		  mapTypeControl: true,
-		  mapTypeControlOptions: 
-		  	{style: google.maps.MapTypeControlStyle.DEFAULT,
-			 position: google.maps.ControlPosition.TOP_LEFT },
-
-		  scaleControl: true,
-		   scaleControlOptions: {
-        		position: google.maps.ControlPosition.BOTTOM_RIGHT
-    	  }, 
-		  mapTypeId: google.maps.MapTypeId.ROADMAP,
-		  draggable: true,
-		  disableDoubleClickZoom: false,
-		  keyboardShortcuts: true
-		};
-		var map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
-		if (false) {
-			var trafficLayer = new google.maps.TrafficLayer();
-			trafficLayer.setMap(map);
-		}
-		if (false) {
-			var bikeLayer = new google.maps.BicyclingLayer();
-			bikeLayer.setMap(map);
-		}
-		if (false) {
-			addMarker(map, 53.302737, -8.995055,"We are here");
-		}
-	  }
-
-	  window.onload = initializeGoogleMap();
-
-	 // Add a marker to the map at specified latitude and longitude with tooltip
-	 function addMarker(map,lat,long,titleText) {
-	  	var markerLatlng = new google.maps.LatLng(lat,long);
-	 	var marker = new google.maps.Marker({
-      		position: markerLatlng, 
-      		map: map, 
-      		title:"We are here",
-			icon: ""});   
-	 }
-
-	
-// EndOAWidget_Instance_2187524
-      </script>
+    
     </div>
     <div data-role="content">
   
     	
-<p>Website:<a href="www.thinkwater.ie">www.thinkwater.ie</a></p>
+<p>Website:<a href="http://testingthinkwater.net84.net/">www.thinkwater.ie</a></p>
 <p>Email: thinkwaterirl@gmail.com</p>
 <p>Phone : (091)555556</p>
 <p>Address : 2A Racecourse Business Park, Parkmore,Galway</p>
